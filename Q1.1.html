@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core-Tech Responsive</title>
+    <style>
+        * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #d6d8da;
+            padding-bottom: 50px;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background-color: #6c757d;
+            padding: 10px 20px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            color: white;
+            font-size: clamp(24px, 4vw, 35px);
+            font-weight: 800;
+        }
+
+        .navdiv ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li a {
+            color: white;
+            font-size: 14px;
+            padding: 5px;
+            white-space: nowrap;
+        }
+
+        /* --- Card Section --- */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-grow: 1; /* Jayga thakle boro hobe */
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .card-body p {
+            font-size: 16px;
+            color: white;
+        }
+
+        .msg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            padding: 8px;
+            border: #000000 solid 2px;
+            border-radius: 10px;
+        }
+
+        .msg p {
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* --- Lower Box Section (Settings) --- */
+        .bottom-section {
+            display: flex;
+            flex-wrap: wrap; /* Pashapashi rakhar jonno */
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px; /* Box-er size ektu boro kora hoyeche content-er jonno */
+            min-height: 350px;
+        }
+
+        .box1 h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .line {
+            border-bottom: 2px solid black;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkbox-group {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+
+        .btn-update { background-color: #1a237e; }
+        .btn-reset { background-color: #6c757d; }
+
+        /* --- Responsive Queries --- */
+        @media (max-width: 768px) {
+            .navdiv {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .bottom-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">CORE-TECH</a> </div>
+            <ul>
+                <li><a href="#">OVERVIEW</a></li>
+                <li><a href="#">ANALYTICS</a></li>
+                <li><a href="#">REPORTS</a></li>
+                <li><a href="#">SECURITY</a></li>
+                <li><a href="#">Admin: System_Root</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-container">
+        <div class="card" style="background-color: #1975d1;">
+            <div class="card-body">
+                <p>Total Users</p>
+                <h1>12,450</h1>
+                <div class="msg" style="background-color: rgb(160, 2, 184);">
+                    <p>UP +12% monthly</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="background-color: #378b3b;">
+            <div class="card-body">
+                <p>Total Users</p>
+                <h1>12,450</h1>
+                <div class="msg" style="background-color: rgb(160, 2, 184);">
+                    <p>UP +12% monthly</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="background-color: #f78100;">
+            <div class="card-body">
+                <p>Total Users</p>
+                <h1>12,450</h1>
+                <div class="msg" style="background-color: rgb(160, 2, 184);">
+                    <p>UP +12% monthly</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="background-color: #781fa0;">
+            <div class="card-body">
+                <p>Total Users</p>
+                <h1>12,450</h1>
+                <div class="msg" style="background-color: rgb(160, 2, 184);">
+                    <p>UP +12% monthly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        
+        <div class="box">
+            <div class="box1">
+                <h2>System Configuration</h2>
+                <div class="line"></div>
+                
+                <label>Server Name:</label>
+                <input type="text" placeholder="Enter Server alias">
+                
+                <label>Deployment Zone:</label>
+                <select>
+                    <option>North America</option>
+                    <option>East America</option>
+                    <option>South America</option>
+                    <option>West America</option>
+                </select>
+                
+                <label>System Description:</label>
+                <textarea rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box1">
+                <h2>Access Permission</h2>
+                <div class="line"></div>
+                
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Read</label>
+                    <label><input type="checkbox"> Write</label>
+                    <label><input type="checkbox"> Delete</label>
+                    <label><input type="checkbox"> API</label>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-update">UPDATE SETTINGS</button>
+                    <button class="btn btn-reset">RESET</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
